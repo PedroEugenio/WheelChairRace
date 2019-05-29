@@ -8,6 +8,18 @@ public class Item : MonoBehaviour{
     int points;
     string type;
 
+    public AudioSource dropSound;
+
+    void Start (){
+        dropSound = GetComponent<AudioSource> ();
+    }
+
+    public void OnCollisionEnter (Collision collision){
+
+        if(collision.gameObject.tag == "Bottle"){
+            dropSound.Play();
+        }
+    }
 
     public bool destroyItem()
     {

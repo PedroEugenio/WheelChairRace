@@ -3,7 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bottle
+  - Key
+  - HotDog
+  - Popcorn
+  - Car
+  - Computer
+  - Fruit
+  - Stereo
+  - Backpack
+  - Microwave
+  - Jar
+  - Blender
+  - Pot
+  - Ground
   layers:
   - Default
   - TransparentFX
