@@ -18,6 +18,9 @@ TagManager:
   - Blender
   - Pot
   - Ground
+  - Button
+  - ShelfToMove
+  - Dude
   layers:
   - Default
   - TransparentFX

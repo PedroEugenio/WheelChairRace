@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.wheeltest.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\virtualdei\\Desktop\\WheelChairRace-master\\actions.json",
+      "action_manifest_path": "C:\\Users\\virtualdei\\Desktop\\WheelChairRace\\actions.json",
       "strings": {
         "en_us": {
           "name": "WheelTest [Testing]"

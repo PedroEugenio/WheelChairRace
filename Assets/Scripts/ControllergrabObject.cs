@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
 
-public class ControllergrabObject : MonoBehaviour
+public class ControllerGrabObject : MonoBehaviour
 {
     public SteamVR_Input_Sources handType;
     public SteamVR_Behaviour_Pose controllerPose;
@@ -60,10 +60,6 @@ public class ControllergrabObject : MonoBehaviour
         objectInHand = null;
     }
 
-
-
-
-    // Update is called once per frame
     void Update()
     {
         if (grabAction.GetLastStateDown(handType)) {
