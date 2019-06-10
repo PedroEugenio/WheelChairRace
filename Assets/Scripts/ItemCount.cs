@@ -10,7 +10,7 @@ public class ItemCount : MonoBehaviour
 
     private float startTime = 300f;
     private float currentTime = 0f;
-    private string lost = "YOU LOST!";
+    private bool endCheck = false;
     
     private int hotdog_counter = 0, stereo_counter = 0, jar_counter = 0, popcorn_counter = 0, fruit_counter = 0;
 
@@ -56,26 +56,30 @@ public class ItemCount : MonoBehaviour
     }
 
     void Update(){
-        if(timerText.text != "lost" && hotdog_counter == 3 && stereo_counter == 1 && jar_counter == 1 && popcorn_counter == 2 && fruit_counter == 3){
+        if(timerText.text != "YOU LOST!" && hotdog_counter == 3 && stereo_counter == 1 && jar_counter == 1 && popcorn_counter == 2 && fruit_counter == 3){
             timerText.text = "YOU WON!!!";
             timerText.color = Color.green;
             timerText.fontSize = 25;
+            endCheck = true;
         }
 
-        else{
+        else if(!endCheck){
             itemsText.text = "Hot Dogs: "+hotdog_counter+"/3 \n Stereo: "+stereo_counter+"/1 \n Mayo Jar: "+jar_counter+"/1 \n Popcorn: "+popcorn_counter+"/2 Fruit: "+fruit_counter+"/3";
 
             currentTime -= 1 * Time.deltaTime;
             timerText.text = currentTime.ToString("0");
 
             if(currentTime <= 0 && currentTime >= (-3)){ 
-                timerText.text = lost;
+                timerText.text = "YOU LOST!";
                 timerText.color = Color.red;
                 timerText.fontSize = 25;
                 
-            }/* else if(currentTime < (-2)){
+            }
+        }
+        else {
+            /*if(currentTime < (-2)){
                 SceneManager.LoadScene(2);
-            }  */
+            }*/
         }
     }
 }

@@ -8,7 +8,7 @@ public class ActivateKey : MonoBehaviour
     public void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Key"){
-            Destroy(collixsion.gameObject);
+            Destroy(collision.gameObject);
             shelfie = GameObject.FindGameObjectsWithTag("ShelfToMove");
             foreach (GameObject sh in shelfie){
                 sh.transform.Translate(Vector3.up * 2.0f);
